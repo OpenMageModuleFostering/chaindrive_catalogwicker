@@ -1,0 +1,39 @@
+<?php 
+/**
+ 
+ */
+?>
+<?php $_prev = $this->getPreviousProduct(); ?>
+<?php $_next = $this->getNextProduct(); ?>
+
+<?php if($_prev || $_next): ?>
+<div class="block pager">
+    <?php if($_prev): ?>
+    <a rel="prev" class="product-prev left" title="<?php echo $this->escapeHtml($_prev->getName()); ?>" onclick="loadgroup(<?php echo $_prev->getID()?>); return false;" href="<?php echo $_prev->getProductUrl(); ?>">&laquo; <?php echo Mage::helper('chaindrive_catalogwicker')->__('Previous') ?></a>
+    <?php endif; ?>
+
+    <?php if($_next): ?>
+    <a rel="next" class="product-next right" title="<?php echo $this->escapeHtml($_next->getName()); ?>" onclick="loadgroup(<?php echo $_next->getID()?>); return false;" href="<?php echo $_next->getProductUrl(); ?>"><?php echo Mage::helper('chaindrive_catalogwicker')->__('Next') ?> &raquo;</a>
+    <?php endif; ?>
+</div>
+<?php endif; ?>
+<div id="overlay" style="display:none;position:fixed;top:50%;left: 40%;"><img src="<?php echo $this->getSkinUrl('images/loading24.gif')?>"/></div>
+ <script type="text/javascript">
+ function loadgroup(id)
+ {
+     
+	loadurl="<?php echo $this->getUrl('catalogwicker/product/loadgroupproducts');?>";
+	new Ajax.Request(loadurl, {
+		method: 'post',
+		parameters: 'pid='+id,
+		onCreate:function(){
+		jQuery("#overlay").show();			},
+		onComplete: function(transport) {
+			jQuery("#overlay").hide();
+			jQuery("div.col-main").html(" ");
+			jQuery("div.col-main").html(transport.responseText);
+			
+		}	
+	});
+ }
+ </script>

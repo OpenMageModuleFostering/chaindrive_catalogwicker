@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Chaindrive_Catalogwicker>
+            <version>0.1.2</version>
+        </Chaindrive_Catalogwicker>
+    </modules>
+	
+    <frontend>
+        <routers>
+            <catalogwicker>
+                <use>standard</use>
+                <args>
+                    <modules>
+                        <Chaindrive before="Mage_Catalog">Chaindrive_Catalogwicker</Chaindrive>
+                    </modules>
+				
+                    <frontName>catalogwicker</frontName>
+                </args>
+            </catalogwicker>
+        </routers>
+	
+		
+        <layout>
+            <updates>
+                <catalogwicker>
+                    <file>chaindrivecatalog.xml</file>
+                </catalogwicker>
+            </updates>
+        </layout><!---->
+        
+           <events>
+            <controller_action_postdispatch>
+                <observers>
+                    <chaindrive_catalogwicker_set_filtered_category_product_collection>
+                        <class>chaindrive_catalogwicker/observer</class>
+                        <method>setInchooFilteredCategoryProductCollection</method>
+                    </chaindrive_catalogwicker_set_filtered_category_product_collection>
+                </observers>                
+            </controller_action_postdispatch>
+        </events>
+        
+        
+    </frontend> 
+    <global>
+        <blocks>
+	   
+            <catalog>
+                <rewrite>
+                    <product_view>Chaindrive_Catalogwicker_Block_Product_View</product_view>
+                </rewrite>
+            </catalog><!---->
+            <catalogwicker>
+                <rewrite>
+                    <product_loadgroupproducts>Chaindrive_Catalogwicker_Block_Product_Loadgroupproducts</product_loadgroupproducts>
+                </rewrite>
+            </catalogwicker>
+        </blocks>
+        <models>
+            <chaindrive_catalogwicker>
+                <class>Chaindrive_Catalogwicker_Model</class>
+            </chaindrive_catalogwicker>
+        </models>
+        <helpers>
+            <chaindrive_catalogwicker>
+                <class>Chaindrive_Catalogwicker_Helper</class>
+            </chaindrive_catalogwicker>
+        </helpers>
+        <blocks>
+            <chaindrive_catalogwicker>
+                <class>Chaindrive_Catalogwicker_Block</class>
+            </chaindrive_catalogwicker>
+        </blocks> 
+        
+        
+    </global>
+
+</config>

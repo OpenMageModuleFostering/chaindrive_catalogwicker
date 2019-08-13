@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Chaindrive_Catalogwicker>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Chaindrive_Catalogwicker>
+    </modules>
+</config>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Chaindrive_Catalogwicker</name>
+    <version>0.1.2</version>
+    <stability>stable</stability>
+    <license>OSL V3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Ajax Based Product Next Prev on detail page</summary>
+    <description>Ajax Based Product Next Prev on detail page</description>
+    <notes>Ajax Based Product Next Prev on detail page</notes>
+    <authors><author><name>Vinod Kumar</name><user>kumarvinod1986</user><email>kumarvinod1986@gmail.com</email></author></authors>
+    <date>2013-01-22</date>
+    <time>10:27:17</time>
+    <contents><target name="magecommunity"><dir name="Chaindrive"><dir name="Catalogwicker"><dir name="Block"><file name="Links.php" hash="1fe21172b37940897ef2cd1ff04aa6bd"/><dir name="Product"><file name="Loadgroupproducts.php" hash="a936bfb6ace86265628dcc88cf0399d3"/><file name="View.php" hash="f745169b231e58c38253b8ac6d37b44f"/></dir></dir><dir name="Helper"><file name="Data.php" hash="c900db8c0e1cd78368c6fa4de8a4f2e4"/></dir><dir name="Model"><file name="Observer.php" hash="eef3cc533bca5f21e7243490af3d8fd5"/></dir><dir name="controllers"><file name="ProductController.php" hash="38e232b1ae13c85760451621d8637391"/></dir><dir name="etc"><file name="config.xml" hash="93c21ec32152c574f50026e1cf767014"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Chaindrive_Catalogwicker.xml" hash="f22dbe45cb7685968a208c426bbacd85"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="chaindrivecatalog.xml" hash="e9dbcccac5656fd411bc18170410daa6"/></dir><dir name="template"><dir name="chaindrivecatalog"><file name="links.phtml" hash="c02b7319c51ab399ee60cd655d862366"/><file name="product.phtml" hash="0a776998d18ebfd97ea72bace6e00d08"/></dir></dir></dir></dir></dir><dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="catalog"><dir name="product"><dir name="view"><file name="media.phtml" hash="5b2101a1114f4e19badddbe9f68b6105"/></dir></dir></dir></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="default"><dir name="default"><dir name="images"><file name="loading24.gif" hash="01f1b23e2581034ab09c4e1cca0f4aae"/></dir></dir></dir></dir></target><target name="mage"><dir name="js"><dir name="jquery"><file name="jquery-1.4.2.min.js" hash="1e5389d096ff70677a5055d98c19691b"/></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>5.5.0</max></php></required></dependencies>
+</package>
