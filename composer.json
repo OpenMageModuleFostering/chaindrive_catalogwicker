@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Chaindrive_Catalogwicker",
+    "name": "OpenMageModuleFostering\/Chaindrive_Catalogwicker",
     "type": "magento-module",
     "license": "OSL-V3.0",
     "homepage": "",
     "description": "Ajax Based Product Next Prev on detail page",
     "authors": [
-    {
-        "name": "Vinod Kumar",
-        "email": "kumarvinod1986@gmail.com"
-    }
-],
+        {
+            "name": "Vinod Kumar",
+            "email": "kumarvinod1986@gmail.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
